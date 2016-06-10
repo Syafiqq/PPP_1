@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" xmlns="http://javafx.com/javafx/8.0.65">
+    <center>
+        <GridPane alignment="center" hgap="10" vgap="10" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="First Name"/>
+                <Label text=":" GridPane.columnIndex="1"/>
+                <TextField fx:id="tf_firstName" GridPane.columnIndex="2"/>
+                <Label text="Middle Name" GridPane.rowIndex="1"/>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="tf_middleName" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label text="Last Name" GridPane.rowIndex="2"/>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextField fx:id="tf_lastName" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <Label text="Nick Name" GridPane.rowIndex="3"/>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <TextField fx:id="tf_nickName" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                <Label text="Gender" GridPane.rowIndex="5"/>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                <RadioButton mnemonicParsing="false" text="Male" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="tg_gender"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$tg_gender" GridPane.columnIndex="2"
+                             GridPane.rowIndex="6"/>
+                <Label text="Date Of Birth" GridPane.rowIndex="4"/>
+                <Label text=":"/>
+                <HBox prefHeight="0.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <children>
+                        <DatePicker fx:id="dp_dateOfBirth" promptText="dd-MM-yyyy"/>
+                    </children>
+                </HBox>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <Label text="Avatar" GridPane.rowIndex="7"/>
+                <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="2"
+                      GridPane.columnSpan="2" GridPane.rowIndex="7">
+                    <children>
+                        <Label fx:id="l_avatarPath" maxWidth="300.0"/>
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        <Button mnemonicParsing="false" onAction="#chooseAvatar" text="Choose"/>
+                    </children>
+                </HBox>
+                <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="7">
+                    <children>
+                        <ImageView fx:id="iv_avatar" fitHeight="150.0" fitWidth="200.0" layoutY="38.0"
+                                   pickOnBounds="true" preserveRatio="true"/>
+                    </children>
+                </Pane>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#cancelRegister" text="Close"/>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#doRegister" text="Register"/>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="40.0"/>
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <top>
+        <Label alignment="CENTER" contentDisplay="CENTER" text="Register" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="30.0"/>
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="40.0" top="10.0"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+</BorderPane>

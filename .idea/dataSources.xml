@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="555272160">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - sample.mcrypt" uuid="8a38fa2a-751e-4b8c-bd8b-f46501294c40">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/storage/sample.mcrypt</jdbc-url>
+    </data-source>
+  </component>
+</project>
