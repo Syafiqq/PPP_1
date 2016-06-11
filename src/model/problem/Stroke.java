@@ -90,7 +90,7 @@ public class Stroke extends Tsukamoto implements Command, Serializable
     {
         double pembilang = 0.0, penyebut = 0.0;
 
-        for(ListIterator<Double> alpha_it = super.alpha.listIterator(), z_it = super.alpha.listIterator(); alpha_it.hasNext() && z_it.hasNext(); )
+        for(ListIterator<Double> alpha_it = super.alpha.listIterator(), z_it = super.z.listIterator(); alpha_it.hasNext() && z_it.hasNext(); )
         {
             double alpha_value = alpha_it.next();
             double z_value     = z_it.next();
